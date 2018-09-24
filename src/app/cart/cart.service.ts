@@ -5,7 +5,7 @@ import { Product } from '../products/product/product';
 @Injectable({providedIn: 'root'})
 export class CartService {
 
-  produtos: Product[] = [];
+  private produtos: Product[] = [];
   update: BehaviorSubject<boolean> = new BehaviorSubject(true);
   qtd: number;
 
@@ -29,6 +29,10 @@ export class CartService {
     });
 
     return sum;
+  }
+
+  obterProdutos(): Product[] {
+    return this.produtos;
   }
 
 
