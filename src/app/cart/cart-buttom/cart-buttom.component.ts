@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-cart-buttom',
@@ -8,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class CartButtomComponent implements OnInit {
 
   qtdProduto: number;
+  valorTotal: number;
 
-  constructor() { }
+  constructor(private cartService: CartService) { 
+    this.cartService.update.subscribe(valor => {
+      this.qtdProduto = this.cartService.obterQuantidadeProduto();
+      this.valorTotal = this.cartService.obterValorTotal();
+    });
+  }
 
   ngOnInit() {
-    this.qtdProduto = 12;
+    this.qtdProduto = this.cartService.obterQuantidadeProduto();
+    this.valorTotal = this.cartService.obterValorTotal();
   }
 
 }
