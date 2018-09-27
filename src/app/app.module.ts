@@ -6,6 +6,7 @@ import { ProductModule } from './products/product.module';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
 import { CartModule } from './cart/cart.module';
+import { CheckoutModule } from './checkout/checkout.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CartModule } from './cart/cart.module';
     ProductModule,
     AppRoutingModule,
     ErrorsModule,
-    CartModule
+    CartModule,
+    CheckoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
