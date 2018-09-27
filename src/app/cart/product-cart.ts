@@ -1,7 +1,7 @@
-export interface Product{
+export interface ProductCart {
     id: number;
     img: string;
     valor: number;
     description: string;
-    estoque: number;
+    quantidade: number;    
 }

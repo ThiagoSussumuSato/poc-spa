@@ -15,6 +15,6 @@ export class ProductComponent {
 
     addCart() {
         this.cartService.addProduto(this.produto);
-        this.cartService.update.next(true); //.next(true);
+        this.cartService.update.next(true);
     }
 }
