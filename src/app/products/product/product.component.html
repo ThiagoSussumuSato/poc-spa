@@ -1,11 +1,10 @@
 <img class="card-img-top" [src]="produto.img" [alt]="produto.description">
 <div class="card-body">
     <p class="card-text">{{produto.description}}</p>
-    <p class="text-muted">estoque: {{produto.estoque}}</p>
     <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
             <button type="button" class="btn btn-primary" (click)="addCart()">Comprar</button>
         </div>
-        <div class="valor">{{produto.valor}}</div>
+        <div class="valor">{{produto.valor  | currency:'BRL':true:'1.2-2'}}</div>
     </div>
 </div>

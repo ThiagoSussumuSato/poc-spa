@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../products/product/product';
+import { CartService } from '../cart/cart.service';
+import { CurrencyPipe } from '@angular/common'
+
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  produtos: Product[];
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
+    this.produtos = this.cartService.obterProdutos();
   }
 
 }
