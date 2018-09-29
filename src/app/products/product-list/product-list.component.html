@@ -1,5 +1,9 @@
-<div class="col-md-4" *ngFor="let product of products" style="display: inline-block">
-  <div class="card mb-4 shadow-sm">
-    <ap-product [produto]="product"></ap-product> 
+
+<div class="row">
+  <div class="col-md-4" *ngFor="let product of products">
+    <div class="card mb-4 shadow-sm">
+      <ap-product [produto]="product"></ap-product> 
+    </div>
   </div>
+
 </div>
