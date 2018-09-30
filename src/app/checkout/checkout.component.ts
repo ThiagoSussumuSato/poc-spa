@@ -18,4 +18,7 @@ export class CheckoutComponent implements OnInit {
     this.produtos = this.cartService.obterProdutos();
   }
 
+  pagar() {
+    console.log('eita ta indo pagar');
+  }
 }
