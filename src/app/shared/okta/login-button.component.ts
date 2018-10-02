@@ -9,6 +9,7 @@ import { OktaAuthService } from '@okta/okta-angular';
 export class LoginButtonComponent implements OnInit {
 
     isAuthenticated: boolean;
+    url: string = '/';
 
     constructor(private oktaAuth: OktaAuthService) {
 
